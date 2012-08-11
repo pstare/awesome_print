@@ -100,7 +100,7 @@ module AwesomePrint
   
       data = data.map do |key, value|
         indented do
-          align(key, width) << colorize(" => ", :hash) << @inspector.awesome(value)
+          colorize(align(key, width)) << colorize(" => ", :hash) << @inspector.awesome(value)
         end
       end
 
